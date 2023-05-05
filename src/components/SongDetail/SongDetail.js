@@ -3,7 +3,6 @@ import './SongDetail.scss';
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import {fetchAsynSongByID, removeSongDetail, getSongDetail, getPicURL} from '../../features/songSlice';
-import './SongDetail.scss';
 
 
 

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import './Header.scss';
-import { Link } from "react-router-dom";
 import {AiOutlineSearch} from '../../../node_modules/react-icons/ai';
 import {fetchAsyncSearch} from '../../features/songSlice';
 import {removeSearchedSong} from '../../features/songSlice';
