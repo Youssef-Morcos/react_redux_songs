@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_redux_songs/static/css/main.6dc8fd2b.css",
+    "main.js": "/react_redux_songs/static/js/main.6da08bb4.js",
+    "index.html": "/react_redux_songs/index.html",
+    "main.6dc8fd2b.css.map": "/react_redux_songs/static/css/main.6dc8fd2b.css.map",
+    "main.6da08bb4.js.map": "/react_redux_songs/static/js/main.6da08bb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6dc8fd2b.css",
+    "static/js/main.6da08bb4.js"
+  ]
+}
