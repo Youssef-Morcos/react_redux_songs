@@ -18,9 +18,11 @@
     margin-right: 1rem;
 }
 
-.logo {
+.logo a {
     font-size: 30px;
     color: $font-primary;
+    text-decoration-line: none;
+    
 
 }
 

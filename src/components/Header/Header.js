@@ -27,11 +27,9 @@ const Header = () => {
     return (
         <div className='nav-bar'>
         <div className='nav-container'>
-            <Link to="/" className='link-home'>
-            <div className='logo'>
-                ALL SONGS.
-            </div>
-            </Link>
+        <div className='logo'>
+                <a href='/'> ALL SONGS. </a>
+        </div>
             <div className='search-bar'>
             <form className="form" onSubmit={submitHandler}>
                <div> 

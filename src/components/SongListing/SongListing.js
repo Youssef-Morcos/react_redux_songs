@@ -19,13 +19,13 @@ const SongListing = () => {
     Object.values(searchedSong).length !== 0 ?
     ( <div>
         <h2>Your song</h2>
-        <div>{searchedSong.tracks.items.map((song, index) => <SearchedSongCard key={index} data={song}/> )}</div>
+        <div className='song-list-container'>{searchedSong.tracks.items.map((song, index) => <SearchedSongCard key={index} data={song}/> )}</div>
         </div>
         )
     :   Object.values(newReleaseSongs).length !== 0 ? 
     ( <div> 
          <h2>Top 50 songs</h2>
-        <div>{newReleaseSongs.items.map((song, index) => <SongCard key={index} data={song}/> )}</div>
+        <div className='song-list-container'>{newReleaseSongs.items.map((song, index) => <SongCard key={index} data={song}/> )}</div>
         </div>
         )
     : <div>
@@ -38,7 +38,7 @@ const SongListing = () => {
     return (
         <div className='song-list'>
            
-            <div className='song-list-container'>{renderSongs}</div>
+            <div className='songlist-container'>{renderSongs}</div>
         </div>
     );
 };
