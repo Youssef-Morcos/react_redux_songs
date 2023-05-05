@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import SongDetail from "./components/SongDetail/SongDetail";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import SearchedSongDetail from './components/SearchedSongDetail/SearchedSongDetail';
+
 
 function App() {
+ 
   return (
+
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+<BrowserRouter > 
+  <Header/>
+  <div className="container">
+  <Routes>
+    <Route path='/' element={<Home/>} />
+    <Route path='/song/:songID' element={<SongDetail/>} />
+    <Route path='/searchedsong/:songID' element={<SearchedSongDetail/>} />
+    <Route  element={<PageNotFound/>} />
+  </Routes>
+  </div>
+  <Footer/>
+</BrowserRouter>,
+     
     </div>
   );
 }
+    
 
 export default App;

@@ -1,0 +1,47 @@
+@import "../../common/colors.scss";
+
+.nav-bar{
+    background-color: $font-secondary;
+
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.bar-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.logo {
+    font-size: 30px;
+    color: $font-primary;
+
+}
+
+.link-home {
+    text-decoration-line: none;
+
+}
+
+.bar-links a {
+ text-decoration-line: none;
+ color: $font-primary;
+}
+
+.form input[type=text] {
+    border: transparent;
+    font-size: 1rem;
+    color: $font-secondary;
+
+   
+
+&:focus {
+    outline: none;
+}
+}

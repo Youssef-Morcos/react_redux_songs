@@ -1,0 +1,31 @@
+@import "../../common/colors.scss";
+
+.cover-pic {
+    height: 350px;
+    width: 350px;
+
+    img {
+        width: 100%;
+        height: 100%;
+      }
+}
+
+.song-info > div span:first-child {
+    padding: 10px 0px;
+    color: $font-secondary;
+    font-weight: 600;
+    width: 100px;
+    display: inline-block;
+  }
+
+.song-info a {
+    padding: 10px 0px;
+    color: $font-secondary;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration-line: none;
+
+    &:hover {
+        color: palevioletred;
+    }
+}
