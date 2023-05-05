@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './SearchedSongDetail.scss';
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import {fetchAsynSongByID, removeSongDetail, getSongDetail, getPicURL} from '../../features/songSlice';
+import {fetchAsynSongByID, removeSongDetail, getSongDetail, getPicURL, fetchAsynFavByID} from '../../features/songSlice';
 
 
 const SearchedSongDetail = () => {
@@ -20,6 +20,10 @@ const SearchedSongDetail = () => {
       let seconds = ((millis % 60000) / 1000).toFixed(0);
       return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
     }
+  
+   const handleAddFav = ()=>{
+    dispatch(fetchAsynFavByID(songID));
+   }
     
  
 
@@ -45,6 +49,7 @@ const SearchedSongDetail = () => {
           <h1>Song Info </h1>
           <div className='cover-pic'>
           <a href={pic}><img src={pic} alt='cover' /></a>
+          <div className='add-fav'><button onClick={handleAddFav}>Add Song to Favorites</button> </div>
           </div>
 
            <div className="song-info">

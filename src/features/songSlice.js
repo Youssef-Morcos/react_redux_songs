@@ -28,11 +28,20 @@ export const fetchAsyncNewRelease = createAsyncThunk(
     }
   );
 
+  export const fetchAsynFavByID = createAsyncThunk(
+    "songs/fetchAsynFavByID",
+    async (id) => {
+        const response = await songAPI.get('/tracks/?ids='+ id);
+      return response.data;
+    }
+  );
+
  const initialState = {
     newRelease: {},
     trackByID: {},
     pics: '',
-    searchedSong: {}
+    searchedSong: {},
+    favoriteSongs: []
  };
 
 const songSlice = createSlice ({
@@ -83,6 +92,16 @@ const songSlice = createSlice ({
         [fetchAsyncSearch.rejected]: () => {
           console.log("Rejected!");
         },
+        [fetchAsynFavByID.pending]: () => {
+          console.log("Pending");
+        },
+        [fetchAsynFavByID.fulfilled]: (state, { payload }) => {
+          console.log("Fetched Successfully!");
+          return { ...state, favoriteSongs: [...state.favoriteSongs, payload  ] };
+        },
+        [fetchAsynFavByID.rejected]: () => {
+          console.log("Rejected!");
+        },
     }
 
 });
@@ -92,4 +111,5 @@ export const allNewRelease = (state) => state.songs.newRelease;
 export const getSongDetail = (state) => state.songs.trackByID;
 export const getPicURL = (state) => state.songs.pics;
 export const getSeachedSong = (state) => state.songs.searchedSong; 
+export const getFavSongs = (state) => state.songs.favoriteSongs; 
 export default songSlice.reducer;
