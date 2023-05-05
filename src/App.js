@@ -17,7 +17,7 @@ function App() {
 
     <div className="App">
 
-<BrowserRouter > 
+<BrowserRouter basename="/react_redux_songs" > 
   <Header/>
   <div className="container">
   <Routes>
